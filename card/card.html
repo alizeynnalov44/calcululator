@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üç Kart Nümunəsi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            border: 1px solid ;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .card p {
+            font-size: 1em;
+            margin-bottom: 1em;
+        }
+        .card button {
+            background-color:black;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const container = document.getElementById('container');
+
+            for (let i = 1; i <= 3; i++) {
+                
+                const card = document.createElement('div');
+                card.className = 'card';
+
+               
+                const h1 = document.createElement('h1');
+                h1.textContent = `Tiwitter ${i}`;
+
+                
+                const p = document.createElement('p');
+            
+
+            
+                const button = document.createElement('button');
+                button.textContent = 'Read More';
+
+                
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-info-circle';
+                button.prepend(icon);
+
+                
+                card.appendChild(h1);
+                card.appendChild(p);
+                card.appendChild(button);
+
+                
+                container.appendChild(card);
+            }
+        });
+    </script>
+</body>
+</html>
